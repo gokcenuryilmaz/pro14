@@ -1,0 +1,38 @@
+div{
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    border: 2px solid black;
+    display: inline-block;
+}
+#middle{
+    background-color: aqua;
+}
+/*static diye adlandırıldığı için 
+top özelliği işe yaramıyor*/
+#static #middle{
+    position: static;
+    top : 100px;
+}
+#relative #middle{
+    position: relative;
+    top: 20px;
+    left: 100px;
+}
+/*altakini yaparsam absolute ıd li eleman
+kendi atasından başka bir yere gidemez
+ama yapmazsam saçma sapan her yere gider.*/
+#absolute{
+    position:relative;
+}
+#absolute #middle{
+    position: absolute;
+    top: 50px;
+    left: 1px;
+}
+#fixed #middle{
+    position: fixed;
+    top:0;
+    left:400px;
+
+}
